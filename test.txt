@@ -1,1 +1,5 @@
+http://localhost:3000
+
 http://localhost:3000/users
+
+http://localhost:3000/users/672b8ad98727ea17a40f48b7

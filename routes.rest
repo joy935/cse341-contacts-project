@@ -1,0 +1,21 @@
+# using REST Client extension for VSCode
+
+### localhost routes (3000 port)
+http://localhost:3000
+
+# get all users
+GET http://localhost:3000/users
+
+# get user by id
+# for example: Ivan Karamazov
+GET http://localhost:3000/users/672b8ad98727ea17a40f48b7
+
+### Render.com routes
+https://project1-2rwd.onrender.com/
+
+# get all users
+GET https://project1-2rwd.onrender.com/users
+
+# get user by id
+# for example: Ivan Karamazov
+GET https://project1-2rwd.onrender.com/users/672b8ad98727ea17a40f48b7
