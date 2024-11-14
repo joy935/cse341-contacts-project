@@ -1,15 +1,44 @@
 # using REST Client extension for VSCode
 
+### LOCALHOST
 ### localhost routes (3000 port)
-http://localhost:3000
+GET http://localhost:3000
 
 # get all users
 GET http://localhost:3000/users
 
-# get user by id
-# for example: Ivan Karamazov
+## get user by id
+## for example: Ivan Karamazov
 GET http://localhost:3000/users/672b8ad98727ea17a40f48b7
 
+## add a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "firstName": "Laura",
+    "lastName": "Danney",
+    "email": "lauradanney@gmail.com",
+    "favoriteColor": "blush",
+    "birthday": "1990-08-08"
+}
+
+## update user by id
+PUT http://localhost:3000/users/6736164eac1ddd51f0ef4554
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Danney",
+    "email": "johndanney@gmail.com",
+    "favoriteColor": "green",
+    "birthday": "1990-01-01"
+}
+
+## delete user by id
+DELETE http://localhost:3000/users/673660611e6e977424a3a664
+
+### RENDER
 ### Render.com routes
 https://project1-2rwd.onrender.com/
 

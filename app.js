@@ -1,11 +1,19 @@
 const express = require("express");
 const app = express();
+const bodyParser = require("body-parser");
+
 const mongodb = require("./data/database");
 
 const port = process.env.PORT || 3000;
 
-app.use("/", require("./routes")
-);
+//app.use(bodyParser.json());
+app.use(express.json());
+app.use("/", require("./routes"));
+app.use((req, res, next) => {
+    console.log(`Incoming request: ${req.method} ${req.url}`);
+    next();
+});
+
 
 mongodb.initDb((err) => {
     if (err) {
