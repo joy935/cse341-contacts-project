@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const validate = require("../middleware/validator");
 
 const usersController = require("../controllers/users");
 
@@ -10,10 +11,10 @@ router.get("/", usersController.getAll);
 router.get("/:id", usersController.getSingle);
 
 // to create a user
-router.post("/", usersController.createUser);
+router.post("/", validate.saveUser, usersController.createUser);
 
 // to update a user
-router.put("/:id", usersController.updateUser);
+router.put("/:id", validate.saveUser, usersController.updateUser);
 
 // to delete a user
 router.delete("/:id", usersController.deleteUser);
