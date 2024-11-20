@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const validate = require("../middleware/validator");
-
 const usersController = require("../controllers/users");
 
 // to get all users
